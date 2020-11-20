@@ -6,5 +6,6 @@
   "license": "MIT",
   "scripts": {
     "build": "mkdir dist && cp -R functions dist/functions"
-  }
+  },
+  "repository": "git@github.com:danielbertolozi/ui5-sound-provider.git"
 }
