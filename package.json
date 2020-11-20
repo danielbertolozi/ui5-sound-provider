@@ -5,6 +5,6 @@
   "author": "I852708 <daniel.bertolozi@sap.com>",
   "license": "MIT",
   "scripts": {
-    "build": "echo a"
+    "build": "mkdir dist && cp -R functions dist/functions"
   }
 }
