@@ -6,15 +6,16 @@ const handler = async function (event, context, callback) {
     //const response = await fetch('https://icanhazdadjoke.com', {
 //      headers: { Accept: 'application/json' },
  //   })
-	const contents = fs.readFileSync(require.resolve("./SAPUI5.mp3"));
+	const contents = fs.readFileSync("./SAPUI5.mp3");
 
-    callback({
+    return {
       statusCode: 200,
 	  headers: {
-		"Access-Control-Allow-Origin": "*"
+		"Access-Control-Allow-Origin": "*",
+		"Content-Type": "audio/mpeg3"
 	  },
       body: contents,
-    });
+    };
   } catch (error) {
     // output to netlify function log
     console.log(error)
