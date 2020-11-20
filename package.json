@@ -5,7 +5,7 @@
   "author": "I852708 <daniel.bertolozi@sap.com>",
   "license": "MIT",
   "scripts": {
-    "build": "mkdir dist && cp -R functions dist/functions"
+    "build": "functions dist/functions"
   },
   "repository": "git@github.com:danielbertolozi/ui5-sound-provider.git"
 }
