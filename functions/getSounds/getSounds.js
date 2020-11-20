@@ -1,12 +1,12 @@
 const fetch = require('node-fetch')
 const fs = require("fs");
+const path = require("path");
+
+const currentDir = process.env.LAMBDA_TASK_ROOT;
 
 const handler = async function (event, context, callback) {
   try {
-    //const response = await fetch('https://icanhazdadjoke.com', {
-//      headers: { Accept: 'application/json' },
- //   })
-	const contents = fs.readFileSync("./SAPUI5.mp3");
+	const contents = fs.readFileSync(path.join(currentDir, "./SAPUI5.mp3"));
 
     return {
       statusCode: 200,
