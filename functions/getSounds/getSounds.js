@@ -1,22 +1,19 @@
 const fetch = require('node-fetch')
+const fs = require("fs");
 
 const handler = async function () {
   try {
-    const response = await fetch('https://icanhazdadjoke.com', {
-      headers: { Accept: 'application/json' },
-    })
-    if (!response.ok) {
-      // NOT res.status >= 200 && res.status < 300
-      return { statusCode: response.status, body: response.statusText }
-    }
-    const data = await response.json()
+    //const response = await fetch('https://icanhazdadjoke.com', {
+//      headers: { Accept: 'application/json' },
+ //   })
+	const contents = fs.readFileSync(require.resolve("./SAPUI5.mp3"));
 
     return {
       statusCode: 200,
 	  headers: {
 		"Access-Control-Allow-Origin": "*"
 	  },
-      body: JSON.stringify({ msg: data.joke }),
+      body: contents,
     }
   } catch (error) {
     // output to netlify function log
