@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "I852708 <daniel.bertolozi@sap.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "echo a"
+  }
 }
